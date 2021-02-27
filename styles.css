@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--color-surface);
+  position: relative;
+}
+
+:root {
+  --color-surface: #29344b;
+  --color-on-surface: #ded4e4;
+  --color-on-purple: #e0d4f6;
+  --color-purple: #675883;
+  --color-red: #885452;
+  --color-on-red: #fcd4d2;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 6rem clamp(4rem, 20%, 12rem);
+  background-color: var(--color-surface);
+  overflow-y: scroll;
+}
+
+article {
+  padding: 1.5rem clamp(2rem, 10%, 6rem);
+  background-color: #f5f2f7;
+  color: #29344b;
+}
+
+.seen {
+  background-color: var(--color-purple);
+  color: var(--color-on-purple);
+}
+
+#label {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background-color: var(--color-red);
+  color: var(--color-on-red);
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+#add-post {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  background-color: var(--color-red);
+  color: var(--color-on-red);
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 1rem;
+}
